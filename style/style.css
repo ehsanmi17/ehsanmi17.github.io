@@ -1,0 +1,229 @@
+
+/*global styles 
+---------------------------------------------------- */
+html{         /*ino aval axare css ha mizanim bekhatere fix shodane float age mikhaym bzarim */
+    box-sizing: border-box;
+}
+*, *:before, ::after {
+    box-sizing: inherit;
+}
+body{
+    color: #2F3061;
+    /*in dota baraye ineke hashiye haye samte chap o raste site az beyin bere---inkaram mitunestim bokonim ->
+    h1{margin:0}  h2{margin:0}    p{margin:0}
+    */
+    margin: 0 ;
+    padding: 0; 
+    /*_____________________________________*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px; /* defualt brwoser ru 16 e */
+    line-height: 1.5;  /*  yani 1.5 barabare andaze font mishe */
+    
+
+
+}
+img {
+    width :300px;
+}
+a {
+  color: #FFE66D;
+}
+a:hover{
+    text-decoration: none;
+}
+h1{
+    font-size: 70px;
+    line-height: 1;
+     
+
+}
+h2{
+    margin: 0;  /*baraye inke fasele bala payin consitent she in va payintar tu project btn  display: inline-block+; */
+    font-size: 45px;
+}
+h1 , h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    margin: 0;
+   
+}
+.content-wrap{
+    max-width: 900px;    /*baraye gharar dadane text seyed mohammad ehsan mirzajani tu ye khat vasat  */
+/* va hamchenin baraye az beyn bordane hashye beyne section ha  kole in seta*/
+    width: 85%; /* un max o in darsad aro gozashtim bara inke responsive beshe age safaro kuchik kardi ya tu mobile kuchik she neveshte*/
+    margin: 0 auto;
+    padding: 60px 0;      /*in dare space ezafe mikone kenare matn, avali bala payin dovomi chaporast*/
+}
+
+
+/*amuzeshe combinators */    /*ba class bandi ham mishe inkaro anjam dad vali in ye raveshe digashe,,
+ un classe dovome item-details ro bara in tarif kardim ke ru bakshe project asar nzare */  
+
+h3{         /*baraye inke fasele ash ba paragraphe payinish kam she */
+    margin-bottom: 0%;
+}
+.item-details h3 ~ p {        /*baraye inke fasele tamame paragraph haye bada az h3 kam sham shan baham  */
+    margin: 0%;
+}
+.item-details h3 + p {      /*baraye inke avalin paragraphe badaz h3 italic she  */
+    font-style: italic;
+}
+
+.divider > section{    /*1 inja ye class tarif kardim ke ghabele apply be bakhse work ham bashe va mikhaym faqat section ro bgire 
+    --- in > alamat ham bekhatere in gozashtim ke bgim un section i ke dakhele dividere */
+border-bottom: 1px dashed #343434;
+padding: 25px 0
+}
+.divider > section:last-of-type {  /*2 bara inke akharin type tu section un bordere pain ro nadashte bashe  */
+    border-bottom: none;
+}
+
+
+/*Profile
+---------------------------------------------------- */
+
+header{
+    background: #28587B;
+    color: white;
+    
+}
+
+
+
+/*Projects
+---------------------------------------------------- */
+.projects{
+    background: #EEEEFF;
+}
+.projects a {
+    color: #2F3061;
+  }
+  .projects .btn {
+  color: #F7FFF7;
+  background: #2F3061;
+  text-decoration: none;  /*az beyn bordane khate zireh*/
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;   /*baraye inke fasele bala payin consitent she in va payintar tu project btn  display: inline-block+; */
+}
+  
+.projects .btn:hover{
+    background: rgba(47, 48, 97, 80%);
+  }
+   /*baraye inke image ha o matno bbari tu ye ghaleb ke image ha chap neshun dadeshe va text flow esh bashe */
+.project-item  {
+    overflow: hidden;     /*marhale 2 ino mizarim ta pkhsho palayish doros she */
+   /* border-bottom: 1px dashed #343434; */          /*4   ba khat joda kone */
+   /* padding: 25px 0;  in dota ro tu ye marhale dg jabeja kardim bordim tu bakhshe global*/     /*marhale 5 fasele bede ba khate 25 ta az bala payin va 0 ta az chapo rast */
+  }
+    /*marhale 6 jaye image o avaz mikonim miyarim balaye heading tu seta project ta heading biyad bakhshi az paragraphemun she va float image shan */
+.project-item h3 {
+    margin-top: 0;  /*marhale 7 ino mizarim ta headinge biyad bala fit she */
+}
+/* .project-item  img{ 
+    float: left;  /*marhale 1 aval class ro tarif mikonm tu html bad ino mizanim vali pakhso pala mishe 
+    margin-right: 20px; /*marhale 3 ino mizanim ta az image yzare fasele bgire 
+}  */
+
+
+
+
+
+
+
+/*Work exprience
+---------------------------------------------------- */
+.work-experience{ /* (amuzeshe grid)>> 1- define a parent class in html job item bad 2ta class dg tarif mikonm ke zir majmue in beshe
+     job summery o details */
+    background: #9FB4C7;
+}
+ /*.job-item{    
+    display: grid;   2- baraye be halat darumadan be surate grid 
+    grid-template-columns: 1fr 2fr;   3- baraye inke be halate column neshun bede avali mishe andaze column vala dovomi dovom */
+    /* point- sevomi bzari seta culomn mishe haminjuri edame dar baraye satr ham hamin grid-template-rows:1fr 1fr 1fr- mituni repeat ham koni 
+    3 repeat(1fr) 
+    column-gap: 20px;  /* 4- baraye inke in 2ta column cheqad fasele dashte bashan az ham 
+}   */
+
+
+
+
+
+
+
+/*Education
+---------------------------------------------------- */
+.education{
+    background: #7F7CAF;
+}
+.education{
+    background-image: url(../images/joanna-kosinska-unsplash.jpg); /*.. bekhatere back az foldere css gozashtim)*/
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 100px; /*in seta bara fit kardane image tu background bekhusus estefade az cover*/
+}
+.education p{
+    width: 60%;  /*bara responsive budanesh*/
+}
+
+
+
+/*Contact info
+---------------------------------------------------- */
+footer{
+    background: #28587B;
+    color: white;
+   /* text-align: center; */
+}
+    
+footer a {
+        color: aqua;
+    }
+.contact-list {    /* (amuzeshe flex)>> 1 define a class in html */
+    list-style-type: none;   /* 2 az beyn bordane bullet ha */
+    padding: 0;/* 3 az beyn bordan space poshtesh */
+   /* display: flex;   /* 4 be surate horizentali pkhash shan tu ye satr 
+    justify-content: center;   /* 5 biyan vasat */
+}
+.contact-list  a {
+    padding: 15px;   /* 6 baraye inke space bdim beyneshun */
+    display: inline-block;  /* 7 baraye inke space bdim beyneshun va be surate block shan */
+}
+
+/* Responsive        bara inke andaze safhe taqir kard in etefaqa biofte
+------------------------------------*/
+@media screen and (min-width:750px){     /* hame in payiina ro to media gozashtim ke age tu
+     safhe bozorg bud anjam beshe age nbud nashe*/
+    header, footer {
+      text-align: center;
+    }
+    .project-item img {    
+      float: left;
+      margin-right: 20px;
+    }
+  
+    .job-item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 20px;
+    }
+    .contact-list {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width:749px){
+    h1 {
+      font-size: 75px;
+      line-height: 0.9;
+      margin-bottom: 20px;
+    }
+    h2 {
+      line-height: 1;
+    }
+    .contact-list a {
+      padding: 5px;
+    }
+  }
+  
